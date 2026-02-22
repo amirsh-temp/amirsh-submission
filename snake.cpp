@@ -60,6 +60,14 @@ void Snake::update_direction(enum Direction direction)
             this->direction = direction;
         }
         break;
+    case Pause:
+        this->direction = Pause;
+        break;
+    case Help_win:
+        if (this->Help_win_mode_next == this->Help_win_mode) {
+            this->Help_win_mode_next = !this->Help_win_mode;
+        }
+        break;
     }
     sem_post(&this->snake_sema);
 }

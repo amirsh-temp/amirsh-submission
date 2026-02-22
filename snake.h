@@ -25,6 +25,8 @@ public:
   bool food_eaten;
   bool is_dead;
   int length;
+  bool Help_win_mode = true;
+  bool Help_win_mode_next = true;
 
 private:
   pthread_t input_thread;

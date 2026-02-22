@@ -46,13 +46,15 @@ void start_game()
 {
     while (true)
     {
-        snake.update_movement();
-        if (is_game_end())
-        {
-            game_over();
-            break;
+        if (snake.get_direction() != Pause) {
+            snake.update_movement();
+            if (is_game_end())
+            {
+                game_over();
+                break;
+            }
+            snake_map.redraw();
         }
-        snake_map.redraw();
 
         usleep(PAUSE_LENGTH);
 

@@ -41,6 +41,12 @@ enum Direction get_input()
     case 's':
         result = South;
         break;
+    case 'h':
+        result = Help_win;
+        break;
+    case 'p':
+        result = Pause;
+        break;
     default:
         result = Error;
         cout << "Incorrect button clicked(" << user_input << ")" << endl;

@@ -7,7 +7,9 @@ enum Direction {
     West = 0,
     North = 1,
     East = 2,
-    South = 3
+    South = 3,
+    Help_win = 4,
+    Pause = 5,
 };
 
 void input_init(void);
